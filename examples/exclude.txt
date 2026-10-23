@@ -1,0 +1,3 @@
+# Infrastructure that must not be scanned
+192.0.2.1
+192.0.2.8/30

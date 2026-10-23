@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "php2shell-assessor"
+version = "1.1.0"
+description = "Authorized, non-invasive PHP web-service discovery and assessment"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "aiohttp>=3.10,<4",
+  "openpyxl>=3.1,<4",
+  "packaging>=24.1",
+  "rich>=13.8,<15",
+]
+
+[project.urls]
+Homepage = "https://github.com/marcelmeir/php2shell-assessor"
+Repository = "https://github.com/marcelmeir/php2shell-assessor"
+Issues = "https://github.com/marcelmeir/php2shell-assessor/issues"
+
+[project.scripts]
+php2shell-scanner = "php2shell.cli:main"
+php2shell-scan-config = "run_scan:main"
+
+[tool.setuptools]
+py-modules = ["run_scan", "php2shell_scanner"]
+
+[tool.setuptools.packages.find]
+include = ["php2shell*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,3 @@
+# One authorized IPv4 network or address per line
+192.0.2.0/28
+198.51.100.10

@@ -1,0 +1,3 @@
+# Formats: IP hostname OR hostname,IP
+192.0.2.5 www.example.edu
+portal.example.edu,192.0.2.5

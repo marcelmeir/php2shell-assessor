@@ -1,0 +1,2 @@
+ip_address,hostname,installed_php_version,verified_patch_status,source
+192.0.2.5,www.example.edu,8.3.36,PATCHED,CMDB package inventory 2026-10-22

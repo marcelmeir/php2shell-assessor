@@ -1,0 +1,44 @@
+# Copy this file to scan_config.toml and edit only the values you need.
+
+[scope]
+# Set to true only after the listed scope has been approved for active scanning.
+authorization_confirmed = false
+
+# One or more authorized IPv4 networks or individual addresses.
+networks = ["192.0.2.0/24"]
+addresses = []
+
+# Optional files. Relative paths are resolved next to this configuration file.
+networks_file = ""
+exclude = []
+exclude_file = "examples/exclude.txt"
+
+# TXT, CSV, TSV, XLSX or XLSM. Common Domain/Hostname/FQDN columns are detected.
+domain_list = "examples/domains.csv"
+
+# Set to false when DNS names must not be sent to the configured resolver.
+resolve_domains = true
+
+# Optional explicit lines in the format "IP hostname".
+hostnames_file = ""
+
+[scan]
+ports = [80, 443, 8080, 8443, 8000, 8008, 8888, 9443]
+paths = ["/", "/index.php", "/login.php"]
+concurrency = 50
+connect_timeout = 3
+http_timeout = 5
+max_rate = 100
+retries = 1
+verbose = false
+# Set to true for scope validation without TCP/HTTP scanning.
+dry_run = false
+
+[report]
+output = "./results"
+# true deliberately replaces an existing checkpoint in the output directory.
+fresh = false
+
+[inventory]
+# Optional authenticated CSV inventory; leave empty when unavailable.
+file = ""

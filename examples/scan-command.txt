@@ -1,0 +1,10 @@
+python php2shell_scanner.py \
+  --networks examples/networks.txt \
+  --exclude examples/exclude.txt \
+  --hostnames examples/hostnames.txt \
+  --ports 80,443,8080,8443,8000,8008,8888,9443 \
+  --concurrency 50 \
+  --timeout 3 \
+  --http-timeout 5 \
+  --max-rate 100 \
+  --output ./results

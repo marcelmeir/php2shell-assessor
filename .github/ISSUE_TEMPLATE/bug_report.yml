@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a reproducible defect without sharing sensitive scan data
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, internal hostnames, or real scan results.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: 1.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Linux, macOS, Windows, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Use documentation-only IP ranges and sanitized names.
+    validations:
+      required: true
